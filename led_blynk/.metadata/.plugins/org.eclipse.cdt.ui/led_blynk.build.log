@@ -1,0 +1,8 @@
+
+**** Build of configuration Debug for project led_blynk ****
+
+/home/sam/Softwares/CCS/CCS/ccs1210/ccs/utils/bin/gmake -k -j 4 all -O 
+ 
+gmake[1]: 'led_blynk.out' is up to date.
+
+**** Build Finished ****

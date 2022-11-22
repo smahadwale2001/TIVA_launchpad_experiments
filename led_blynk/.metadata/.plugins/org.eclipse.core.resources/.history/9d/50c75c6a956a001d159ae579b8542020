@@ -1,0 +1,32 @@
+
+#include<stdint.h>
+#include<stdbool.h>
+#include "inc/hw_types.h"
+#include "inc/hw_memmap.h"
+#include "driverlib/sysctl.h"
+#include "driverlib/debug.h"
+#include "driverlib/gpio.h"
+
+void ext_delay(uint32_t);
+
+int main(void)
+{
+    uint8_t led;
+    led = 2;
+    SysCtlClockSet(SYSCTL_SYSDIV_5 | SYSCTL_USE_PLL | SYSCTL_XTAL_16MHZ | SYSCTL_OSC_MAIN);
+    SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOF);
+    SysCtlDelay(3);
+    GPIOPinTypeGPIOOutput(GPIO_PORTF_BASE,GPIO_PIN_1|GPIO_PIN_2|GPIO_PIN_3);
+    while(1) {
+        GPIOPinWrite(GPIO_PORTF_BASE,GPIO_PIN_1|GPIO_PIN_2|GPIO_PIN_3,led);
+        led+=2;
+        SysCtlDelay(6666667);
+    }
+
+    return 0;
+}
+
+void ext_delay(uint32_t delay_cnt) {
+    volatile uint32_t cnt;
+    while(cnt--);
+}
