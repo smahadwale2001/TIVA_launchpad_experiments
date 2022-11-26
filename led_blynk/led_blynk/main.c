@@ -20,13 +20,16 @@ int main(void)
     while(1) {
         GPIOPinWrite(GPIO_PORTF_BASE,GPIO_PIN_1|GPIO_PIN_2|GPIO_PIN_3,led);
         led+=2;
-        ext_delay(6666667);
+        //ext_delay(33000000); //6.25 s
+        //ext_delay(57142857); //10 s
+        //ext_delay(28571429);  // 5 sec
+        ext_delay(6666667); //1 sec
     }
 
     return 0;
 }
 
 void ext_delay(uint32_t delay_cnt) {
-    volatile uint32_t cnt;
+    uint32_t cnt=delay_cnt;
     while(cnt--);
 }
