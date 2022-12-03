@@ -1171,3 +1171,92 @@ Finished building target: "led_blynk_poll.out"
  
 
 **** Build Finished ****
+
+**** Build of configuration Debug for project led_blynk_poll ****
+
+/home/sam/Softwares/CCS/CCS/ccs1210/ccs/utils/bin/gmake -k -j 4 all -O 
+ 
+gmake[1]: 'led_blynk_poll.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project led_blynk_poll ****
+
+/home/sam/Softwares/CCS/CCS/ccs1210/ccs/utils/bin/gmake -k -j 4 all -O 
+ 
+gmake[1]: 'led_blynk_poll.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project led_blynk_poll ****
+
+/home/sam/Softwares/CCS/CCS/ccs1210/ccs/utils/bin/gmake -k -j 4 all -O 
+ 
+gmake[1]: 'led_blynk_poll.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project led_blynk_poll ****
+
+/home/sam/Softwares/CCS/CCS/ccs1210/ccs/utils/bin/gmake -k -j 4 all -O 
+ 
+gmake[1]: 'led_blynk_poll.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project led_blynk ****
+
+/home/sam/Softwares/CCS/CCS/ccs1210/ccs/utils/bin/gmake -k -j 4 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"/home/sam/Softwares/CCS/CCS/ccs1210/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="/home/sam/COEP/MAP/Assignments/led_blynk/led_blynk" --include_path="/home/sam/Softwares/CCS/CCS/tivaware" --include_path="/home/sam/Softwares/CCS/CCS/ccs1210/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 29: warning #112-D: statement is unreachable
+Finished building: "../main.c"
+ 
+Building target: "led_blynk.out"
+Invoking: Arm Linker
+"/home/sam/Softwares/CCS/CCS/ccs1210/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"led_blynk.map" --heap_size=0 --stack_size=512 -i"/home/sam/Softwares/CCS/CCS/ccs1210/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"/home/sam/Softwares/CCS/CCS/ccs1210/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="led_blynk_linkInfo.xml" --rom_model -o "led_blynk.out" "./main.obj" "./tm4c123gh6pm_startup_ccs.obj" "../tm4c123gh6pm.cmd"  -llibc.a -l"/home/sam/Softwares/CCS/CCS/tivaware/driverlib/ccs/Debug/driverlib.lib" 
+<Linking>
+Finished building target: "led_blynk.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project led_blynk ****
+
+/home/sam/Softwares/CCS/CCS/ccs1210/ccs/utils/bin/gmake -k -j 4 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"/home/sam/Softwares/CCS/CCS/ccs1210/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="/home/sam/COEP/MAP/Assignments/led_blynk/led_blynk" --include_path="/home/sam/Softwares/CCS/CCS/tivaware" --include_path="/home/sam/Softwares/CCS/CCS/ccs1210/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 29: warning #112-D: statement is unreachable
+Finished building: "../main.c"
+ 
+Building target: "led_blynk.out"
+Invoking: Arm Linker
+"/home/sam/Softwares/CCS/CCS/ccs1210/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"led_blynk.map" --heap_size=0 --stack_size=512 -i"/home/sam/Softwares/CCS/CCS/ccs1210/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"/home/sam/Softwares/CCS/CCS/ccs1210/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="led_blynk_linkInfo.xml" --rom_model -o "led_blynk.out" "./main.obj" "./tm4c123gh6pm_startup_ccs.obj" "../tm4c123gh6pm.cmd"  -llibc.a -l"/home/sam/Softwares/CCS/CCS/tivaware/driverlib/ccs/Debug/driverlib.lib" 
+<Linking>
+Finished building target: "led_blynk.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project led_blynk ****
+
+/home/sam/Softwares/CCS/CCS/ccs1210/ccs/utils/bin/gmake -k -j 4 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"/home/sam/Softwares/CCS/CCS/ccs1210/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="/home/sam/COEP/MAP/Assignments/led_blynk/led_blynk" --include_path="/home/sam/Softwares/CCS/CCS/tivaware" --include_path="/home/sam/Softwares/CCS/CCS/ccs1210/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 29: warning #112-D: statement is unreachable
+Finished building: "../main.c"
+ 
+Building target: "led_blynk.out"
+Invoking: Arm Linker
+"/home/sam/Softwares/CCS/CCS/ccs1210/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"led_blynk.map" --heap_size=0 --stack_size=512 -i"/home/sam/Softwares/CCS/CCS/ccs1210/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"/home/sam/Softwares/CCS/CCS/ccs1210/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="led_blynk_linkInfo.xml" --rom_model -o "led_blynk.out" "./main.obj" "./tm4c123gh6pm_startup_ccs.obj" "../tm4c123gh6pm.cmd"  -llibc.a -l"/home/sam/Softwares/CCS/CCS/tivaware/driverlib/ccs/Debug/driverlib.lib" 
+<Linking>
+Finished building target: "led_blynk.out"
+ 
+
+**** Build Finished ****
