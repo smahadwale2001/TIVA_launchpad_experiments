@@ -11,7 +11,7 @@
 int main(void)
 {
     uint8_t led;
-    int test=0;
+    //int test=0;
     led = 2;
     SysCtlClockSet(SYSCTL_SYSDIV_5 | SYSCTL_USE_PLL | SYSCTL_XTAL_16MHZ | SYSCTL_OSC_MAIN);
     SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOF);
