@@ -23,14 +23,17 @@ int main(void)
     while(1) {
         if(!GPIOPinRead(GPIO_PORTF_BASE,GPIO_PIN_0)) {
             led+=2;
-            GPIOPinWrite(GPIO_PORTF_BASE,GPIO_PIN_1|GPIO_PIN_2|GPIO_PIN_3,led);
-            while(!GPIOPinRead(GPIO_PORTF_BASE,GPIO_PIN_0)); // Wait until switch is open
+            GPIOPinWrite(GPIO_PORTF_BASE,GPIO_PIN_1|GPIO_PIN_2|GPIO_PIN_3,2);
+            SysCtlDelay(6666667);
+            //while(!GPIOPinRead(GPIO_PORTF_BASE,GPIO_PIN_0)); // Wait until switch is open
         }
         if(!GPIOPinRead(GPIO_PORTF_BASE,GPIO_PIN_4)) {
             led-=2;
-            GPIOPinWrite(GPIO_PORTF_BASE,GPIO_PIN_1|GPIO_PIN_2|GPIO_PIN_3,led);
+            GPIOPinWrite(GPIO_PORTF_BASE,GPIO_PIN_1|GPIO_PIN_2|GPIO_PIN_3,4);
+            SysCtlDelay(6666667);
             while(!GPIOPinRead(GPIO_PORTF_BASE,GPIO_PIN_4)); // Wait until switch is open
         }
+        GPIOPinWrite(GPIO_PORTF_BASE,GPIO_PIN_1|GPIO_PIN_2|GPIO_PIN_3,8);
     }
 
     return 0;

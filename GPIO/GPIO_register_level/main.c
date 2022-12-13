@@ -53,9 +53,9 @@ int main(void)
     // GPIO direction
     //Input -> 0
     //Output -> 1
-    GPIO_PORTF_DIR_R = GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3;
+    GPIO_PORTF_DIR_R |= GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3;
     // Set the pull up select register GPIOPUR
-    GPIO_PORTF_PUR_R = GPIO_PIN_0 | GPIO_PIN_4;
+    GPIO_PORTF_PUR_R |= GPIO_PIN_0 | GPIO_PIN_4;
 
     // Set the drive current
     GPIO_PORTF_DR8R_R = GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3;
@@ -72,14 +72,17 @@ int main(void)
         //HWREGB(GPIO_PORTF_APB_ADDR,(GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3)) = GPIO_PIN_3;
         if(!HWREGB(GPIO_PORTF_APB_ADDR,GPIO_PIN_0)) {
             led+=2;
-            HWREGB(GPIO_PORTF_APB_ADDR,(GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3)) = led;
-            while(!HWREGB(GPIO_PORTF_APB_ADDR,GPIO_PIN_0)); // Wait until switch is closed
+            HWREGB(GPIO_PORTF_APB_ADDR,(GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3)) = 2;
+            ext_delay(6666667);
+            //while(!HWREGB(GPIO_PORTF_APB_ADDR,GPIO_PIN_0)); // Wait until switch is closed
         }
         if(!HWREGB(GPIO_PORTF_APB_ADDR,GPIO_PIN_4)) {
             led+=2;
-            HWREGB(GPIO_PORTF_APB_ADDR,(GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3)) = led;
-            while(!HWREGB(GPIO_PORTF_APB_ADDR,GPIO_PIN_4)); // Wait until switch is closed
+            HWREGB(GPIO_PORTF_APB_ADDR,(GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3)) = 4;
+            ext_delay(6666667);
+            //while(!HWREGB(GPIO_PORTF_APB_ADDR,GPIO_PIN_4)); // Wait until switch is closed
         }
+        HWREGB(GPIO_PORTF_APB_ADDR,(GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3)) = 8;
     }
 
 	return 0;
