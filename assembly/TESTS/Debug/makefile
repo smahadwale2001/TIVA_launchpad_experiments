@@ -8,12 +8,11 @@ GEN_OPTS__FLAG :=
 GEN_CMDS__FLAG := 
 
 ORDERED_OBJS += \
-"./led_blynk.obj" \
+"./test.obj" \
 "./tm4c123gh6pm_startup_ccs.obj" \
 "../tm4c123gh6pm.cmd" \
 $(GEN_CMDS__FLAG) \
 -llibc.a \
--l"/home/sam/Softwares/CCS/CCS/tivaware/driverlib/ccs/Debug/driverlib.lib" \
 
 -include ../makefile.init
 
@@ -120,43 +119,43 @@ endif
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXE_OUTPUTS += \
-LED_Blynk.out \
+TESTS.out \
 
 EXE_OUTPUTS__QUOTED += \
-"LED_Blynk.out" \
+"TESTS.out" \
 
 BIN_OUTPUTS += \
-LED_Blynk.hex \
+TESTS.hex \
 
 BIN_OUTPUTS__QUOTED += \
-"LED_Blynk.hex" \
+"TESTS.hex" \
 
 
 # All Target
 all: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
-	@$(MAKE) --no-print-directory -Onone "LED_Blynk.out"
+	@$(MAKE) --no-print-directory -Onone "TESTS.out"
 
 # Tool invocations
-LED_Blynk.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
+TESTS.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 	@echo 'Building target: "$@"'
 	@echo 'Invoking: Arm Linker'
-	"/home/sam/Softwares/CCS/CCS/ccs1210/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"LED_Blynk.map" --heap_size=0 --stack_size=0 -i"/home/sam/Softwares/CCS/CCS/ccs1210/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"/home/sam/Softwares/CCS/CCS/ccs1210/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="LED_Blynk_linkInfo.xml" -o "LED_Blynk.out" $(ORDERED_OBJS)
+	"/home/sam/Softwares/CCS/CCS/ccs1210/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"TESTS.map" --heap_size=0 --stack_size=0 -i"/home/sam/Softwares/CCS/CCS/ccs1210/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"/home/sam/Softwares/CCS/CCS/ccs1210/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="TESTS_linkInfo.xml" -o "TESTS.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: "$@"'
 	@echo ' '
 
-LED_Blynk.hex: $(EXE_OUTPUTS)
+TESTS.hex: $(EXE_OUTPUTS)
 	@echo 'Building secondary target: "$@"'
 	@echo 'Invoking: Arm Hex Utility'
-	"/home/sam/Softwares/CCS/CCS/ccs1210/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armhex" --diag_wrap=off -o "LED_Blynk.hex" $(EXE_OUTPUTS__QUOTED)
+	"/home/sam/Softwares/CCS/CCS/ccs1210/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armhex" --diag_wrap=off -o "TESTS.hex" $(EXE_OUTPUTS__QUOTED)
 	@echo 'Finished building secondary target: "$@"'
 	@echo ' '
 
 # Other Targets
 clean:
 	-$(RM) $(BIN_OUTPUTS__QUOTED)$(EXE_OUTPUTS__QUOTED)
-	-$(RM) "led_blynk.obj" "tm4c123gh6pm_startup_ccs.obj" 
+	-$(RM) "test.obj" "tm4c123gh6pm_startup_ccs.obj" 
 	-$(RM) "tm4c123gh6pm_startup_ccs.d" 
-	-$(RM) "led_blynk.d" 
+	-$(RM) "test.d" 
 	-@echo 'Finished clean'
 	-@echo ' '
 
